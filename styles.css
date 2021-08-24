@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Gestures Variable";
+    src: url(assets/fonts/GesturesGX-Trial.ttf) format("truetype-variations");
+  }
+
+  h1 {
+    font-family: "Gestures Variable";
+    font-size: 50rem;
+    /* font-variation-settings:  */
+  }
