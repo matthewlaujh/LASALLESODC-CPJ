@@ -1,10 +1,418 @@
+/* Stylesheet for Lau Jun Hui Matthew Creative Process Journal */
+
+/* Document specifc styles */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow: scroll;
+}
+
+/* Style Guide Page */
+.style-guide {
+    margin: 100px;
+}
+
+/* Load Font */
 @font-face {
-    font-family: "Gestures Variable";
-    src: url(assets/fonts/GesturesGX-Trial.ttf) format("truetype-variations");
+    font-family: "Fira-Code-Variable";
+    src: url(assets/fonts/FiraCode-VariableFont_wght.ttf) format("truetype-variations");
+} /* wght 300-700 */
+
+@font-face {
+    font-family: "Austin News Deck";
+    src: url(assets/fonts/AustinNewsDeck-Light.otf) format("opentype");
+    font-weight:  200;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Austin News Deck";
+    src: url(assets/fonts/AustinNewsDeck-LightItalic.otf) format("opentype");
+    font-weight:  200;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Atlas Grotesk";
+    src: url(assets/fonts/AtlasGrotesk-Light.otf) format("opentype");
+    font-weight:  200;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Atlas Grotesk";
+    src: url(assets/fonts/AtlasGrotesk-LightItalic.otf) format("opentype");
+    font-weight:  200;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+/* Navigation Bar */
+.left-nav-bar {
+    border-right: 2px dotted #FFA500;
+    width: 20vw;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    display: block;
+    overflow: clip;
+}
+
+.nav-content {
+    margin-top: 2vw;
+    padding: 2vw;
+    position: fixed;
+    display: block;
+    overflow: clip;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+p.nav-link {
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-feature-settings: "liga" 1, "kern" 1,;
+    font-variation-settings: 'wght' 400;
+    color: #000;
+}
+
+p.nav-link :hover {
+    font-family: "Fira-Code-Variable";
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+    font-feature-settings: "liga" 1, "kern" 1, "ss01";
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+}
+
+p.nav-link :active {
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-feature-settings: "liga" 1, "kern" 1, "ss01";
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+}
+
+p.nav-link :visited {
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-feature-settings: "liga" 1, "kern" 1, "ss01";
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+}
+
+.nav-footer {
+    margin-top: 2vw;
+    padding: 2vw;
+    position: fixed;
+    display: block;
+    overflow: clip;
+    bottom: 2vw;
+}
+
+p.nav-footer-content {
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-feature-settings: "liga" 1, "kern" 1,;
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+    width: 15vw;
+}
+
+/* Dashboard */
+#miro-board {
+    margin-top: 2vw;
+    width: 50vw;
+    height: 50vw;
+}
+
+#pixlee_container {
+    margin-top: 2vw;
+    width: 50vw;
+}
+
+/* Pages */
+.main-content {
+    margin-left: 20vw;
+    width: 80vw;
+    height: 100vw;
+    position: absolute;
+    display: block;
+    overflow: scroll;
+}
+
+.content {
+    margin: 2vw;
+    padding: 2vw;
+    position: absolute;
+    display: block;
+    overflow: scroll;
+}
+
+.back-to-top {
+    padding: 2vw;
+    margin: 2vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #FFA500;
+}
+
+a.back-to-top-arrow {
+    padding: 2vw;
+    margin: 2vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: "Fira-Code-Variable";
+    color: #FFA500;
+}
+
+@keyframes end-of-week-animation {
+    from {
+      font-variation-settings: "wght" 300;
+    }
+    to {
+      font-variation-settings: "wght" 700;
+    }
   }
 
-  h1 {
-    font-family: "Gestures Variable";
-    font-size: 50rem;
-    /* font-variation-settings:  */
-  }
+p.end-of-week {
+    margin-top: 1vw;
+    width: 50vw;
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: #FFA500;
+    transition: font-variation-settings 0.3s ease;
+    animation-name: end-of-week-animation;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+img.gradproj-content {
+    margin-top: 1vw;
+    width: 50vw;
+    height: auto;
+}
+
+p.page-header {
+    margin-bottom: 2vw;
+    display: block;
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+}
+
+p.page-subheader {
+    margin-top: 2vw;
+    margin-bottom: -1vw;
+    display: block;
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+}
+
+p.page-content {
+    margin-top: 1vw;
+    width: 50vw;
+    font-family: "Fira-Code-Variable";
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+}
+
+p.reflections-content {
+    margin-top: 1vw;
+    width: 50vw;
+    font-family: "Fira-Code-Variable";
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+}
+
+
+p.dissertation-header {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    display: block;
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: green;
+}  
+
+p.dissertation-content {
+    margin-top: 1vw;
+    display: block;
+    width: 50vw;
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: green;
+}
+
+p.dissertation-quote {
+    margin-top: 1vw;
+    display: block;
+    width: 50vw;
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: green;
+}
+
+a.dissertation-quote {
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: green;
+    text-decoration: underline dotted;
+}
+
+p.dissertation-quote-name {
+    margin-top: 2vw;
+    margin-bottom: -1vw;
+    display: block;
+    width: 50vw;
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: green;
+}
+
+p.gradproj-header {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    display: block;
+    width: 50vw;
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: blue;
+}  
+
+p.gradproj-content {
+    margin-top: 1vw;
+    display: block;
+    width: 50vw;
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: blue;
+}
+
+a.gradproj-content {
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: blue;
+    text-decoration: underline dotted;
+}
+
+p.gradproj-quote {
+    margin-top: 1vw;
+    display: block;
+    width: 50vw;
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: blue;
+}
+
+a.gradproj-quote {
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: blue;
+    text-decoration: underline dotted;
+}
+
+p.gradproj-quote-name {
+    margin-top: 2vw;
+    margin-bottom: -1vw;
+    display: block;
+    width: 50vw;
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: blue;
+}
+
+p.gradproj-caption {
+    display: block;
+    width: 50vw;
+    font-family: "Atlas Grotesk";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: blue;
+}
+
+p.code-block {
+    margin-top: 1vw;
+    padding: 2.5vw;
+    width: 40vw;
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    font-variation-settings: 'wght' 400;
+    color: #fff;
+    background-color: #282D32;
+}
