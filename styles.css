@@ -65,6 +65,7 @@
 .nav-content {
     margin-top: 2vw;
     padding: 2vw;
+    width: 15vw;
     position: fixed;
     display: block;
     overflow: clip;
