@@ -73,11 +73,11 @@
 
 p.nav-link {
     font-family: "Fira-Code-Variable";
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2.5rem;
     font-feature-settings: "liga" 1, "kern" 1,;
     font-variation-settings: 'wght' 400;
-    color: #000;
+    color: #FFA500;
 }
 
 p.nav-link :hover {
@@ -91,7 +91,7 @@ p.nav-link :hover {
 
 p.nav-link :active {
     font-family: "Fira-Code-Variable";
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2.5rem;
     font-feature-settings: "liga" 1, "kern" 1, "ss01";
     font-variation-settings: 'wght' 400;
@@ -100,7 +100,7 @@ p.nav-link :active {
 
 p.nav-link :visited {
     font-family: "Fira-Code-Variable";
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2.5rem;
     font-feature-settings: "liga" 1, "kern" 1, "ss01";
     font-variation-settings: 'wght' 400;
@@ -118,7 +118,7 @@ p.nav-link :visited {
 
 p.nav-footer-content {
     font-family: "Fira-Code-Variable";
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2rem;
     font-feature-settings: "liga" 1, "kern" 1,;
     font-variation-settings: 'wght' 400;
