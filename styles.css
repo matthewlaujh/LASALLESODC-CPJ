@@ -72,36 +72,27 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
-p.nav-link {
+a.nav-link {
     font-family: "Fira-Code-Variable";
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 2.5rem;
     font-feature-settings: "liga" 1, "kern" 1,;
     font-variation-settings: 'wght' 400;
     color: #FFA500;
 }
 
-p.nav-link :hover {
+a.nav-link :hover {
     font-family: "Fira-Code-Variable";
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 2.5rem;
     font-feature-settings: "liga" 1, "kern" 1, "ss01";
-    font-variation-settings: 'wght' 400;
+    font-variation-settings: 'wght' 700;
     color: #FFA500;
 }
 
-p.nav-link :active {
+a.nav-link :visited {
     font-family: "Fira-Code-Variable";
-    font-size: 1.25rem;
-    line-height: 2.5rem;
-    font-feature-settings: "liga" 1, "kern" 1, "ss01";
-    font-variation-settings: 'wght' 400;
-    color: #FFA500;
-}
-
-p.nav-link :visited {
-    font-family: "Fira-Code-Variable";
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 2.5rem;
     font-feature-settings: "liga" 1, "kern" 1, "ss01";
     font-variation-settings: 'wght' 400;
@@ -211,7 +202,7 @@ p.page-header {
     margin-bottom: 2vw;
     display: block;
     font-family: "Fira-Code-Variable";
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 2rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
@@ -220,10 +211,9 @@ p.page-header {
 
 p.page-subheader {
     margin-top: 2vw;
-    margin-bottom: -1vw;
     display: block;
     font-family: "Fira-Code-Variable";
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 2rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
@@ -234,7 +224,38 @@ p.page-content {
     margin-top: 1vw;
     width: 50vw;
     font-family: "Fira-Code-Variable";
-    font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+}
+
+p.page-content-dash {
+    width: 50vw;
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+}
+
+a.page-content-dash-link {
+    width: 50vw;
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    font-variation-settings: 'wght' 400;
+    color: #FFA500;
+    text-decoration: underline dotted;
+}
+
+a.page-content-dash-link:visited {
+    width: 50vw;
+    font-family: "Fira-Code-Variable";
+    font-size: 1.5rem;
     line-height: 3rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
@@ -244,11 +265,12 @@ p.page-content {
 p.reflections-content {
     margin-top: 1vw;
     width: 50vw;
-    font-family: "Fira-Code-Variable";
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: normal;
     font-size: 2rem;
     line-height: 3rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
-    font-variation-settings: 'wght' 400;
     color: #FFA500;
 }
 
