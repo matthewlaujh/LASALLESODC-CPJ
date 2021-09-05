@@ -6,6 +6,7 @@
     padding: 0;
     background-color: #fff;
     overflow: scroll;
+    box-sizing:border-box
 }
 
 /* Style Guide Page */
@@ -65,7 +66,7 @@
 .nav-content {
     margin-top: 2vw;
     padding: 2vw;
-    width: 15vw;
+    width: 18vw;
     position: fixed;
     display: block;
     overflow: clip;
@@ -110,8 +111,8 @@ a.nav-link :visited {
 
 p.nav-footer-content {
     font-family: "Fira-Code-Variable";
-    font-size: 1.25rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-feature-settings: "liga" 1, "kern" 1,;
     font-variation-settings: 'wght' 400;
     color: #FFA500;
@@ -197,6 +198,15 @@ img.gradproj-content {
     width: 50vw;
     height: auto;
 }
+
+img.gradproj-content-grid-16vw {
+    margin-top: 1vw;
+    margin-right: 1vw;
+    width: 16vw;
+    height: auto;
+    display: inline-block;
+}
+
 
 p.page-header {
     margin-bottom: 2vw;
@@ -299,6 +309,17 @@ p.dissertation-content {
     line-height: 3rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: green;
+}
+
+a.dissertation-content {
+    font-family: "Austin News Deck";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: green;
+    text-decoration: underline dotted;
 }
 
 p.dissertation-quote {
