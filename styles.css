@@ -360,6 +360,18 @@ p.dissertation-quote-name {
     color: green;
 }
 
+p.dissertation-caption {
+    display: block;
+    width: 50vw;
+    font-family: "Atlas Grotesk";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-feature-settings: 'liga' 1, 'kern' 1,;
+    color: green;
+}
+
 p.gradproj-header {
     margin-top: 2vw;
     margin-bottom: 2vw;
