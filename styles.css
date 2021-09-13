@@ -175,7 +175,7 @@ p.end-of {
     margin-top: 4vw;
     width: 60vw;
     font-family: "Fira-Code-Variable";
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: #FFA500;
@@ -210,7 +210,7 @@ p.page-header {
     margin-bottom: -2vw;
     display: block;
     font-family: "Fira-Code-Variable";
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
