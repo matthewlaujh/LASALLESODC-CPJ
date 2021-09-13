@@ -1,17 +1,30 @@
 /* Stylesheet for Lau Jun Hui Matthew Creative Process Journal */
 
-/* Document specifc styles */
 * {
     margin: 0;
     padding: 0;
     background-color: #fff;
-    overflow: scroll;
-    box-sizing:border-box
+    box-sizing:border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-/* Style Guide Page */
-.style-guide {
-    margin: 100px;
+@media screen and (min-width: 1281px) {
+    * {
+      font-size: 16px;
+    }
+}
+  
+@media screen and (max-width: 1280px) {
+    * {
+      font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    * {
+      font-size: 6px;
+    }
 }
 
 /* Load Font */
@@ -54,29 +67,21 @@
 
 /* Navigation Bar */
 .left-nav-bar {
-    border-right: 2px dotted #FFA500;
-    width: 20vw;
+    width: 26vw;
     height: 100vh;
     z-index: 100;
     position: fixed;
-    display: block;
-    overflow: clip;
+    overflow: hidden;
 }
 
 .nav-content {
-    margin-top: 2vw;
-    padding: 2vw;
-    width: 18vw;
-    position: fixed;
-    display: block;
-    overflow: clip;
-    background-color: rgba(0, 0, 0, 0);
+    padding: 4vw 2vw 4vw 4vw;
 }
 
 a.nav-link {
     font-family: "Fira-Code-Variable";
     font-size: 1rem;
-    line-height: 2.5rem;
+    line-height: 2.6rem;
     font-feature-settings: "liga" 1, "kern" 1,;
     font-variation-settings: 'wght' 400;
     color: #FFA500;
@@ -85,7 +90,7 @@ a.nav-link {
 a.nav-link :hover {
     font-family: "Fira-Code-Variable";
     font-size: 1rem;
-    line-height: 2.5rem;
+    line-height: 2.6rem;
     font-feature-settings: "liga" 1, "kern" 1, "ss01";
     font-variation-settings: 'wght' 700;
     color: #FFA500;
@@ -94,48 +99,45 @@ a.nav-link :hover {
 a.nav-link :visited {
     font-family: "Fira-Code-Variable";
     font-size: 1rem;
-    line-height: 2.5rem;
+    line-height: 2.6rem;
     font-feature-settings: "liga" 1, "kern" 1, "ss01";
     font-variation-settings: 'wght' 400;
     color: #FFA500;
 }
 
 .nav-footer {
-    margin-top: 2vw;
-    padding: 2vw;
+    padding: 4vw 2vw 2vw 4vw;
     position: fixed;
-    display: block;
-    overflow: clip;
-    bottom: 2vw;
+    bottom: 0;
 }
 
 p.nav-footer-content {
     font-family: "Fira-Code-Variable";
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
     font-feature-settings: "liga" 1, "kern" 1,;
     font-variation-settings: 'wght' 400;
     color: #FFA500;
-    width: 15vw;
+    width: 20vw;
 }
 
 /* Dashboard */
 #miro-board {
     margin-top: 2vw;
-    width: 50vw;
+    width: 60vw;
     height: 50vw;
 }
 
 #pixlee_container {
     margin-top: 2vw;
-    width: 50vw;
+    width: 60vw;
 }
 
 /* Pages */
 .main-content {
-    margin-left: 20vw;
+    margin-left: 26vw;
     width: 80vw;
-    height: 100vw;
+    height: 100vh;
     position: absolute;
     display: block;
     overflow: scroll;
@@ -149,26 +151,18 @@ p.nav-footer-content {
     overflow: scroll;
 }
 
-.back-to-top {
-    padding: 2vw;
-    margin: 2vw;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    color: #FFA500;
-}
-
 a.back-to-top-arrow {
-    padding: 2vw;
-    margin: 2vw;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    position: fixed;
+    color: #FFA500;
+    scroll-behavior: smooth;
+    bottom: 2vw;
+    right: 2vw;
     font-family: "Fira-Code-Variable";
     color: #FFA500;
+    z-index: 100;
 }
 
-@keyframes end-of-week-animation {
+@keyframes end-of-animation {
     from {
       font-variation-settings: "wght" 300;
     }
@@ -177,26 +171,31 @@ a.back-to-top-arrow {
     }
   }
 
-p.end-of-week {
-    margin-top: 1vw;
-    width: 50vw;
+p.end-of {
+    margin-top: 4vw;
+    width: 60vw;
     font-family: "Fira-Code-Variable";
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: #FFA500;
     transition: font-variation-settings 0.3s ease;
-    animation-name: end-of-week-animation;
-    animation-duration: 1.5s;
+    animation-name: end-of-animation;
+    animation-duration: 3s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 
 img.gradproj-content {
-    margin-top: 1vw;
-    width: 50vw;
+    margin-top: 4vw;
+    width: 60vw;
     height: auto;
+}
+
+.image-grid {
+    margin-top: 4vw;
+    width: 60vw;
 }
 
 img.gradproj-content-grid-16vw {
@@ -208,53 +207,60 @@ img.gradproj-content-grid-16vw {
 }
 
 p.page-header {
-    margin-bottom: 2vw;
+    margin-bottom: -2vw;
     display: block;
     font-family: "Fira-Code-Variable";
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
     color: #FFA500;
+    transition: font-variation-settings 0.3s ease;
+    animation-name: end-of-animation;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 p.page-subheader {
-    margin-top: 2vw;
+    margin-top: 4vw;
     display: block;
     font-family: "Fira-Code-Variable";
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
     color: #FFA500;
 }
 
 p.page-content {
-    margin-top: 1vw;
-    width: 50vw;
+    margin-top: 4vw;
+    width: 60vw;
     font-family: "Fira-Code-Variable";
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
     color: #FFA500;
+    text-indent: 3vw;
 }
 
 p.page-content-dash {
-    width: 50vw;
+    width: 60vw;
     font-family: "Fira-Code-Variable";
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
     color: #FFA500;
 }
 
 a.page-content-dash-link {
-    width: 50vw;
+    width: 60vw;
     font-family: "Fira-Code-Variable";
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
     color: #FFA500;
@@ -262,51 +268,52 @@ a.page-content-dash-link {
 }
 
 a.page-content-dash-link:visited {
-    width: 50vw;
+    width: 60vw;
     font-family: "Fira-Code-Variable";
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
     color: #FFA500;
 }
 
 p.reflections-content {
-    margin-top: 1vw;
-    width: 50vw;
+    margin-top: 4vw;
+    width: 60vw;
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
+    text-indent: 3vw;
     color: #FFA500;
 }
 
-
 p.dissertation-header {
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
     display: block;
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: green;
 }  
 
 p.dissertation-content {
-    margin-top: 1vw;
+    margin-top: 4vw;
     display: block;
-    width: 50vw;
+    width: 60vw;
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
+    text-indent: 3vw;
     color: green;
 }
 
@@ -315,21 +322,22 @@ a.dissertation-content {
     font-weight: 200;
     font-style: normal;
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: green;
     text-decoration: underline dotted;
 }
 
 p.dissertation-quote {
-    margin-top: 1vw;
+    margin-top: 4vw;
     display: block;
-    width: 50vw;
+    width: 60vw;
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: italic;
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
+    text-indent: 3vw;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: green;
 }
@@ -339,17 +347,17 @@ a.dissertation-quote {
     font-weight: 200;
     font-style: italic;
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: green;
     text-decoration: underline dotted;
 }
 
 p.dissertation-quote-name {
-    margin-top: 2vw;
-    margin-bottom: -1vw;
+    margin-top: 4vw;
+    margin-bottom: -4vw;
     display: block;
-    width: 50vw;
+    width: 60vw;
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
@@ -361,39 +369,40 @@ p.dissertation-quote-name {
 
 p.dissertation-caption {
     display: block;
-    width: 50vw;
+    width: 60vw;
     font-family: "Atlas Grotesk";
     font-weight: 200;
     font-style: normal;
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: green;
 }
 
 p.gradproj-header {
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
     display: block;
-    width: 50vw;
+    width: 60vw;
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: blue;
 }  
 
 p.gradproj-content {
-    margin-top: 1vw;
+    margin-top: 4vw;
     display: block;
-    width: 50vw;
+    width: 60vw;
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
+    text-indent: 3vw;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: blue;
 }
@@ -403,21 +412,22 @@ a.gradproj-content {
     font-weight: 200;
     font-style: normal;
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: blue;
     text-decoration: underline dotted;
 }
 
 p.gradproj-quote {
-    margin-top: 1vw;
+    margin-top: 4vw;
     display: block;
-    width: 50vw;
+    width: 60vw;
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: italic;
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
+    text-indent: 3vw;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: blue;
 }
@@ -427,17 +437,17 @@ a.gradproj-quote {
     font-weight: 200;
     font-style: italic;
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: blue;
     text-decoration: underline dotted;
 }
 
 p.gradproj-quote-name {
-    margin-top: 2vw;
-    margin-bottom: -1vw;
+    margin-top: 4vw;
+    margin-bottom: -4vw;
     display: block;
-    width: 50vw;
+    width: 60vw;
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
@@ -448,26 +458,14 @@ p.gradproj-quote-name {
 }
 
 p.gradproj-caption {
+    margin-bottom: 4vw;
     display: block;
-    width: 50vw;
+    width: 60vw;
     font-family: "Atlas Grotesk";
     font-weight: 200;
     font-style: normal;
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: blue;
-}
-
-p.code-block {
-    margin-top: 1vw;
-    padding: 2.5vw;
-    width: 40vw;
-    font-family: "Fira-Code-Variable";
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-feature-settings: 'liga' 1, 'kern' 1,;
-    font-variation-settings: 'wght' 400;
-    color: #fff;
-    background-color: #282D32;
 }
