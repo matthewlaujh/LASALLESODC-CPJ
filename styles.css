@@ -106,7 +106,7 @@ a.nav-link :visited {
 }
 
 .nav-footer {
-    padding: 4vw 2vw 2vw 4vw;
+    padding: 4vw 2vw 4vw 4vw;
     position: fixed;
     bottom: 0;
 }
@@ -169,7 +169,7 @@ a.back-to-top-arrow {
     to {
       font-variation-settings: "wght" 700;
     }
-  }
+}
 
 p.end-of {
     margin-top: 4vw;
@@ -283,7 +283,7 @@ p.reflections-content {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     text-indent: 3vw;
@@ -310,8 +310,8 @@ p.dissertation-content {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
-    font-size: 2rem;
-    line-height: 3.5rem;
+    font-size: 1.65rem;
+    line-height: 3rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     text-indent: 3vw;
     color: green;
@@ -321,7 +321,7 @@ a.dissertation-content {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: green;
@@ -335,7 +335,7 @@ p.dissertation-quote {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     text-indent: 3vw;
     font-feature-settings: 'liga' 1, 'kern' 1,;
@@ -346,7 +346,7 @@ a.dissertation-quote {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: green;
@@ -400,7 +400,7 @@ p.gradproj-content {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     text-indent: 3vw;
     font-feature-settings: 'liga' 1, 'kern' 1,;
@@ -411,7 +411,7 @@ a.gradproj-content {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: blue;
@@ -425,7 +425,7 @@ p.gradproj-quote {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     text-indent: 3vw;
     font-feature-settings: 'liga' 1, 'kern' 1,;
@@ -436,7 +436,7 @@ a.gradproj-quote {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: blue;
@@ -490,7 +490,7 @@ p.appendix-content {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     text-indent: 3vw;
     font-feature-settings: 'liga' 1, 'kern' 1,;
@@ -504,7 +504,7 @@ p.appendix-quote {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     text-indent: 3vw;
     font-feature-settings: 'liga' 1, 'kern' 1,;
@@ -515,7 +515,7 @@ a.appendix-quote {
     font-family: "Austin News Deck";
     font-weight: 200;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.65rem;
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     color: #000;
