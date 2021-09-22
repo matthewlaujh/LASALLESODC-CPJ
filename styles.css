@@ -11,13 +11,13 @@
 
 @media screen and (min-width: 3072px) {
     * {
-      font-size: 12px;
+      font-size: 10px;
     }
 }
   
 @media screen and (max-width: 3071px) {
     * {
-      font-size: 8px;
+      font-size: 6px;
     }
 }
 
