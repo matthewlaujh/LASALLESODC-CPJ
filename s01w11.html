@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lau Jun Hui Matthew Creative Process Journal — S01W09</title>
+     <!-- Prepared by Lau Jun Hui Matthew - 16379 - BADC5C -->
+    
+    <!-- Meta information, for machines to read, SEO -->
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="Author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Load StyleSheets -->
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+    <!-- Load Navigation -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+  </head>
+
+  <body>
+    <!-- Navigation (Do not delete, ensure on every page.)-->
+    <div id="nav-placeholder"></div>
+    <script> $(function(){$("#nav-placeholder").load("navigation-bar.html");});</script>
+    <!-- End of Navigation-->
+
+    <div class="back-to-top"><a class="back-to-top-arrow" href="#top">Top ▲</a></div>
+    
+    <div class="main-content">
+      <div class="content">
+        <p class="page-header">Semester One Week Eleven: 25.10.21 — 29.10.21</p>
+        
+        <p class="dissertation-header">
+          Dissertation:<br>
+          <!-- // 25.10.21 - Feedback: Research Proposal Outline.<br> -->
+          // 26.10.21 - Consultation: Dissertation Introduction and Methodology with Vikas Kailankaje.
+        </p>
+
+        <p class="gradproj-header">
+          Graduation Project:<br>
+          // 26.10.21 - Arduino + Machine Learning Exploration: TinyML using Teachable Machine and Arduino.<br>
+          // 26.10.21 - Arduino + Machine Learning Exploration: TinyML using Tiny Motion Trainer and Arduino.<br>
+          // 27.10.21 - Consultation: Graduation Project Game plan with Andreas Schlegel.
+        </p>
+
+        <p class="appendix-header">
+          #S01W11 Appendices:<br>
+          // SO1W11.A - Consultation: Dissertation Introduction and Methodology with Vikas Kailankaje.<br>
+          // SO1W11.B - Consultation: Graduation Project Game plan with Andreas Schlegel.
+        </p>
+
+        <!-- <p class="dissertation-header">// 25.10.21 - Feedback: Research Proposal Outline.</p>
+
+        <p class="dissertation-content">
+          Not sure how I feel about the feedback given here,
+        </p> -->
+
+        <p class="dissertation-header">// 26.10.21 - Consultation: Dissertation Introduction and Methodology with Vikas Kailankaje.</p>
+
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vSv5OeLZrD1fl6J2iSD2bvKYwMJzLO9BwlLb0Wjnsh3acZdI_fTjVXfKQkvwHJFfnKf6g8o1SLd_R6r/pub?embedded=true" style="height:1000px;width:60vw;"></iframe>
+
+        <p class="dissertation-content">
+          Refer to Appendix SO1W11.A for consultation transcript.
+        </p>
+
+        <p class="dissertation-content">
+        I think things are a lot clearer this consultation, especially since I broke down all the different sections clearly. And seems like
+        things make sense, I just got to continue working on it. Vikas mentioned that I should include diagrams in the dissertation to help
+        illustrate the ideas and methods and I think that would help too, but I always find myself struggling to break the words into diagrams
+        for some reason (usually it'd be the other way around right?). But yeah I am kind of weird like that? But I'll try to work in the diagrams,
+        might've been harder earlier cause I wasn't too sure what's happening too, but now with a clearer head I might be able to work something
+        out for the next draft. I think it was really helpful advice to remember that not everything has to be in the dissertation, somethings could
+        be left for further self exploration and other forms of executions so that's something to note for when the content becomes too much.
+        </p>
+
+        <p class="end-of">// End of this Section.</p>
+
+        <p class="gradproj-header">// 26.10.21 - Arduino + Machine Learning Exploration: TinyML using Teachable Machine and Arduino.</p>
+
+        <p class="gradproj-content">
+          So I panic bought another Arduino Nano 33 BLE Sense, after I saw that it was going out of stock online everywhere from the official Arduino
+          store to the retailers locally and overseas and they would not be back in stock till jan/feb next year. So I bought a second one, firstly
+          as a back up device, can't just rely on one and hope that it doesn't break, too many aspects of my dissertation and graduation project rely
+          on it, so it's always good to have a spare and well secondly because, if the goal is to have remote communication between two devices,
+          I would kinda need two devices so might as well get one on standby now. But what's interesting about the one I bought now was that, the
+          standalone devices were out of stock everywhere, so I had to get one that was included inside their <a class="gradproj-content" href="https://store-usa.arduino.cc/products/arduino-tiny-machine-learning-kit" target="_blank">
+          Tiny Machine Learning Kit</a>, which I managed to find a local seller who had some (it was also sold out on the Arduino store).
+        </p>
+
+        <p class="gradproj-content">
+          So what's interesting about this kit was that it came with a camera module that could be connected using the PCB they provided and it was also
+          the recommended kit for edX course that I was taking, so there might be something fun to do there later on. But for now I was interested to see
+          if it could work with the Teachable Machine's no-code image machine learning environment. I remember Joanne from last year playing around with it
+          and I find it quite interesting so this could be something fun to experiment around with. Also, facial expression is one of the forms of
+          recognising affective states that I was looking at experimenting with for dissertation so if I could get some experience with this it would be
+          good. It would be even better if it works well with the Arduino Nano 33 BLE Sense (as shown in this google experiments project, <a class="gradproj-content" href="https://experiments.withgoogle.com/visual-alarm-clock" target="_blank">
+          Visual Alarm Clock</a> that would open up a whole new bunch of possibilities for possible inputs.
+        </p>
+
+        <p class="gradproj-content">
+          To do that, google experiments has created <a class="gradproj-content" href="https://github.com/googlecreativelab/teachablemachine-community/blob/master/snippets/markdown/tiny_image/GettingStarted.md" target="_blank">
+          Teachable Machine Embedded Models</a> for use with such microcontrollers. My understanding of how it works is that there's a .ino sketch that 
+          is to be uploaded to the Arduino, then it connects to a processing sketch, which then links the images to Teachable Machine to train the model.
+          I have embedded the two sketches needed to make this possible below for sharing and keeping track purposes, the first is the .ino sketch for the
+          Arduino and the second is the .pde sketch that has to run in the background.
+        </p>
+
+        <iframe src=https://create.arduino.cc/editor/matthewlaujh/d2b1103c-2880-47ee-9eaf-53d4169a5452/preview?embed style="height:610px;width:30vw;margin-top:4vw; margin-bottom:4vw;" frameborder=0></iframe>
+
+        <iframe src=https://create.arduino.cc/editor/matthewlaujh/6f03b090-d56e-44a6-84ee-e2a1a991db39/preview?embed style="height:610px;width:30vw;margin-top:4vw; margin-bottom:4vw;" frameborder=0></iframe>
+
+        <div class="image-grid">
+        <img class="gradproj-content-grid-28vw" src="assets/images/teachable-machine/teachable-machine-pde.png">
+        <img class="gradproj-content-grid-28vw" src="assets/images/teachable-machine/02-teachable-machine.png">
+        </div>
+        <p class="gradproj-caption">Image One: Peep the guest star who contributed to one of the libraries that makes this possible. 
+          Image Two: Testing the Camera.</p>
+
+        <div class="image-grid">
+        <img class="gradproj-content-grid-28vw" src="assets/images/teachable-machine/01-normal-face.gif">
+        <img class="gradproj-content-grid-28vw" src="assets/images/teachable-machine/01-smile-face.gif">
+        </div>
+        <p class="gradproj-caption">Image One: Normal Face Images. Image Two: Smile Face Images.</p>
+        <br>
+        <div class="igEmbed"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/tv/CVqEoqspdJ_/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin-top: 4vw; max-width:30vw; min-width:30vw; padding:0; width:30vw; width:calc(100% - 2px)"><div style="padding:16px;"> <a href="https://www.instagram.com/tv/CVqEoqspdJ_/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/tv/CVqEoqspdJ_/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Matthew Lau (@interaction.exploration)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script></div>
+
+        <div class="igEmbed"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/tv/CVqEsEzJL_d/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin-top: 4vw; max-width:30vw; min-width:30vw; padding:0; width:30vw; width:calc(100% - 2px)"><div style="padding:16px;"> <a href="https://www.instagram.com/tv/CVqEsEzJL_d/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/tv/CVqEsEzJL_d/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Matthew Lau (@interaction.exploration)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script></div>
+
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/tv/CVqEvvBJwVG/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin-top: 4vw; max-width:30vw; min-width:30vw; padding:0; width:30vw; width:calc(100% - 2px)"><div style="padding:16px;"> <a href="https://www.instagram.com/tv/CVqEvvBJwVG/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/tv/CVqEvvBJwVG/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Matthew Lau (@interaction.exploration)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+
+        <p class="gradproj-content">
+          The three instagram posts above shows the three different models each one trained with different amount of images. The first had 13 images,
+          the second used the initial 13 and added 26 more images making it 39, images and the third one used the 39 images, but added another 100 images,
+          making it 139 images. So I realised that the first model with 13 images, was very, very inaccurate especially when my eyes changed in sizes,
+          which prompted me to add more images focusing on "opening" and "shrinking" my eyes. The second one wasn't too bad but I realised that it was 
+          not picking up the right face, when I turned slightly to the sides, so I trained the third model to recognise parts of the sides of the 
+          face as well. I did sort of like the setup for FaceID where i would turn from the left to right and in a circular motion to capture 
+          more parts of the face. As expected the more images, the more accurate. But something that got me quite curious about was that, could the
+          inaccuracies be due to the resolution of the camera module? From what I know this camera module only had 0.3 megapixels, so was that a factor?
+          Was the low pixel count unable to pick up on some of the more subtle muscle expressions or was it because it was only in black and white?
+          The Teachable Machine Embedded Models for use with microcontrollers is only in black and white (to keep file sizes small and compatible with
+          the Arduino), would that be a factor? It's probably something to note. There's another way to train models, but it would require some python
+          code to convert the models to be compatible with the Arduino, might have to look into that when I have the chance to later on as well.
+          For dissertation, it might be better to use the native camera in the laptop to test things out first, but im not sure if that's clashing with
+          objectives of the dissertation, got some thinking to do regarding this. But at least it kind of works now.
+        </p>
+
+        <iframe src=https://create.arduino.cc/editor/matthewlaujh/c5ed6b66-722c-4c48-a8d9-3853c321c007/preview?embed style="height:610px;width:30vw;margin-top:4vw; margin-bottom:4vw;" frameborder=0></iframe>
+
+        <img class="gradproj-content" src="assets/images/teachable-machine/01-teachable-machine.png">
+        <p class="gradproj-caption">Image: ERROR ERROR ERROR.</p>
+
+        <p class="gradproj-content">
+          Ok things were going too smoothly there for a moment, disaster eventually and finally struck. The code would not upload to the arduino. There
+          was some error and I spent like a whole day trying to troubleshoot it, but I couldn't find what's wrong, and like it's the code generated
+          by Teachable Machine, with no edits, so it couldn't have been a mess up on my part. But eventually I did find a <a class="gradproj-content" href="https://github.com/googlecreativelab/teachablemachine-community/issues/249" target="_blank">
+          github issue</a> where another user raised this bug to the developers, but it has not been answered, so for now I will be putting this 
+          on hold till I can find a way to resolve it or they've fixed the bug.
+        </p>
+
+        <p class="end-of">// End of this Section.</p>
+
+        <p class="gradproj-header">// 26.10.21 - Arduino + Machine Learning Exploration: TinyML using Tiny Motion Trainer and Arduino.</p>
+
+        <p class="gradproj-content">
+          So after the Teachable Machine error code prevented me from further exploring that route, I went back to using the Tiny Motion Trainer, after
+          messing around with it a bit (including during the cohort presentation), I thought it was time to start figuring out how the application of it.
+          I decided to start with something simple, so a simple left and right motion and then trying to upload that to the Arduino, and then testing out
+          how accurate it was running the model just on the device and not on the computer.
+        </p>
+
+        <div class="image-grid">
+        <img class="gradproj-content-grid-28vw" src="assets/images/tiny-motion-trainer/01-left-right-test-1.png">
+        <img class="gradproj-content-grid-28vw" src="assets/images/tiny-motion-trainer/01-left-right-test-2.png">
+        </div>
+        <p class="gradproj-caption">Image One: Data set for left gesture. Image Two: Data set for right gesture.</p>
+
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRNfnXMsMAlOSoICUO0EXgbBdpGvyI57QWYxWeSckQzkKi_LVz8SYzxprhyEQkJuJqz4lmQHOpFZ9CB/pubhtml?widget=true&amp;headers=false" style="height:1000px;width:60vw;"></iframe>
+
+        <p class="gradproj-content">
+          The data visualization graphs in the trainer doesn't actually show much information, besides just the line graphs, they do not identify,
+          what do they signify and like what are the values. Although just by looking at them, I can sort of see that the Yellow line is likely the
+          X-Axis Accelerometer and Blue Line is the X-Axis Gyrometer, as then in the "left" model you can see that it is below the middle 
+          line while on the "right" model it is above it. So in an effort to dive deeper into what actually going on with the trainer, I
+          downloaded the CSV Data files to take a look at the raw numerical data, and they sort of confirmed my assumptions about the lines,
+          although for the other colours I will have to do more tests to figure them out. But having access to the CSV Data File actually gave me
+          a cool idea for the future, I could probably use those data to work out a data visualization visual in p5.js down the road, either as accompanying
+          visuals for the project or just to make something that I could understand better. Also if there's some time over the next few weeks, one way 
+          I can figure out the lines, is to probably do a quick visualization with my own set of colours and maybe try to match the graph in the
+          trainer and then overlay them to see what's what.
+        </p>
+
+        <div class="image-grid">
+        <img class="gradproj-content-grid-28vw" src="assets/images/tiny-motion-trainer/01-left-right-test-3.png">
+        <img class="gradproj-content-grid-28vw" src="assets/images/tiny-motion-trainer/01-left-right-test-4.png">
+        </div>
+        <p class="gradproj-caption">Image One: Training the Model. Image Two: Testing the Model.</p>
+
+        <p class="gradproj-content">
+          After that was training the model, so after taking part of the edX TinyML course, I could understand what epochs were (the number of passes 
+          during the training, so 1 epoch = all the data passing once), The higher the epoch meant more passes which would train the model to be more
+          accurate. If I recalled it right, I think it's recommended to do around 100 epochs? But it varies based on the amount of data, but I was
+          curious about what if I did more, since the dataset was relatively small, I decided just to try 500 epochs for the "fun" of it. As seen
+          in the graph, after the initial slight validation loss, it was fairly accurate all the way, and didn't really make much of a difference after
+          the first few epochs. I was kind of expecting there to be more loss at the start, so maybe if I did more epochs it would correct itself? But
+          I think due to the fairly simple dataset, the model was quite accurate from the start, so that was not very necessary? Well at least now I know
+          though so that's good. From here I can probably adjust the number of epochs accordingly to suit the model that I was training. With the 
+          trained model, Tiny Motion Trainer provides a downloaded model that was programmed to work with the Arduino Nano 33 BLE Sense, just have
+          to open the .ino file and upload it.
+        </p>
+
+        <iframe src=https://create.arduino.cc/editor/matthewlaujh/f1b94385-60d6-4a6d-accd-e8569b57be92/preview?embed style="height:610px;width:30vw;margin-top:4vw; margin-bottom:4vw;" frameborder=0></iframe>
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/tv/CVqE1jkJ8OI/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin-top: 4vw; max-width:30vw; min-width:30vw; padding:0; width:30vw; width:calc(100% - 2px)"><div style="padding:16px;"> <a href="https://www.instagram.com/tv/CVqE1jkJ8OI/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/tv/CVqE1jkJ8OI/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Matthew Lau (@interaction.exploration)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+
+        <p class="gradproj-content">
+          So with this it's proof that the models do run on the arduino devices, the code provided by the trainer just shows that it works, and as mentioned
+          in the notes provided, it's not production ready so the next step from here would be to figure out how to turn the recognition of gestures
+          into forms of output. 
+        </p>
+
+        <p class="end-of">// End of this Section.</p>
+
+        <p class="gradproj-header">// 27.10.21 - Consultation: Graduation Project Game plan with Andreas Schlegel.</p>
+
+        <img class="gradproj-content" src="assets/images/dissertation-notes/gameplan.jpg">
+        <p class="gradproj-caption">Image: The game plan that I hope I can execute.</p>
+
+        <p class="gradproj-content">
+          I think it's about time I had a real plan to navigate the rest of the year before semester two begins. This semester has just been a lot of
+          trying to figure things out and figuring out different technical challenges that I have to overcome and it's been quite overwhelming, there's
+          just been a lot of trying out of different things and most of them not working out or being simplified till it kind of worked. But just so much
+          time spent looking for tutorials, looking for documentation, changing a single value in the code to hope it works. Honestly it's been quite
+          demotivating and tiring, I say I want to give up at least 20 times a day. But then somehow something would kinda work and pull me back in, 
+          (am I being gaslighted by code?). But I haven't had much opportunity to work on the narratives of the project and the whole interaction design
+          part of things, even things about interfaces or creative outputs, it has just been one technological barrier after the other. I have kind of lost
+          sight of the goals of the project. It's been a real struggle, when there are technical limitations in the way of things. So the plan now
+          was to focus on overcoming all relevant technological barrier by this year, so that when school picks back up in January for Sem 2, I could
+          purely focus on the creative design aspects of the project.
+        </p>
+
+        <p class="gradproj-content">
+          After having clearly define the structure of my dissertation's discussion I had some starting points to plan out what's needed to be done.
+          So starting out to clearly define the goals of the project, from a technical standpoint that would be to recognise, communicate and interpret 
+          affective states remotely through physical computing devices, so the TLDR would be to make remote communication devices to help people express
+          their feelings, without having to explicity mention how they feel. So it's a form of indirect communication? In a sense? But yes, I think the
+          focus that I would like to keep is to help people communicate feelings. And to look at how feelings, something that can't be seen in a way,
+          can be visualised and seen, heard, felt? To make it tangible? To find ways to interface feelings and emotions? To co-interpret the understanding
+          of feelings.
+        </p>
+
+        <p class="gradproj-content">
+          Breaking the project in two main parts, The first is the input, recognition, so following the skeleton as described in the dissertation discussion.
+          The first is Facial Expression, muscle expressions in the face that signify different feelings. The next is Vocal Modulation, the tonality in the
+          way things are said. The last is Motor Output, which can be seen as Gestures, Postures, Pressure and other bodily motions. The next aspect is 
+          the outputs, the interpretation of feelings. So viewing affect as interaction, the co-interpretation of affect and how affect can be viewed as art.
+          So the end goal of the project is to use those inputs to generate outputs through the use of standalone devices for effective affective communication.
+        </p>
+
+        <p class="gradproj-content">
+          So the goals for the rest of the semester/till the end of the year are:<br>
+          1) Get Machine Learning platforms like Teachable Machine and Tiny Motion Trainer to recognise emotions (in-line with first portion of discussion for
+          dissertation).<br>
+          2) Be able to run the Machine Learning models on the Arduino, building up to be able to build stand alone devices.<br>
+          3) Translate those models into data that can be used for outputs.<br>
+          4) Bring the data-to-output functions online to enable the remote communication aspects of the devices.<br>
+          5) Experiment with some forms of outputs (in-line with second portion of discussion for dissertation).<br>
+          6) Work out any other major technical challenges.
+        </p>
+
+        <p class="gradproj-content">
+          Refer to Appendix SO1W11.B for consultation transcript.
+        </p>
+
+        <p class="gradproj-content">
+          So after talking it through with Andreas, the advice was to slim things down and simplify things as it was quite a fair bit of work to be done,
+          focus on finishing it task by task, completed one circuit, one function, one task, before moving on to the next one. Probably best to finish the one
+          using gestures for now. Work on and gauge the fidelity of the each execution, make sure things don't fall apart, make sure the software works as 
+          intended, it just proves that it does work at a simple basic level. Focus on low fidelity. Don't take it as an engineering project but look at it
+          from an interaction design standpoint. Looking online at samples especially from places like ECAL, these interaction design projects don't need to
+          be super finished but just a working early stage prototype can have good documentation.
+        </p>
+
+        <p class="gradproj-content">
+          So the advice was to take that as a goal rather than thinking about finishing a product. Only then will one direction be counted as 
+          completed and then can maybe move on to another one. The same advice applies to the output aspect. Show proof of concepts not finished 
+          work. Use small experiments as reference or starting points and then get some feed back on them. Do not jump into the rabbit hole, 
+          design things quickly and then test them out and fine-tune them again later. Andreas also recommended that I really try to finish it and 
+          be satisfied with it and don't push it too far so that more time can be spent on the aesthetic, visuals, sounds, behaviour and packaging. 
+          So finishing it by the end of the year would be good. So the goal for the next few weeks is to get a working proof of concept and find a 
+          way to present it cleanly.
+        </p>
+
+        <p class="gradproj-content">
+          I understand what Andreas means by the low fidelity and the finishing of the project but I think where the struggle is now, firstly is
+          working on the components that link with the dissertation, those parts I still have to try to work on it as they're integral to the dissertation,
+          but I guess I could simplify it, so maybe for the inputs that link with the dissertation I can just focus on training the models and getting
+          them to work on the computer, leave the uploading to Arduino part out of it for now. And as for the outputs I think I have a rough understanding
+          of how to control them so I can start thinking about interaction design for those parts. The struggles now lay in the remote communication
+          aspects of things, linking up the interfaces. That's where I see the biggest problems. Although I have sort of figured out MQTT-Protocols for
+          sending information online. It's how I link the machine learning models to the data to be sent over that I forsee as my biggest hurdle at this
+          point. I should also start looking at some materials and possible forms of interface, maybe get access to the workshop to be able to prototype
+          some ideas using acrylic and wood.
+        </p>
+
+        <p class="end-of">// End of this Section.</p>
+
+        <p class="end-of">// End of the Week.</p>
+
+        <p class="appendix-header">// SO1W11.A - Consultation: Dissertation Introduction and Methodology with Vikas Kailankaje.</p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          So I have roughly broken down the structure of the Introduction and I have expanded the Summary of
+          Readings into a Literature Review and am about 70% done I think, but mainly I have broken down what I needed to expand on
+          based on what I had left out of the RPO. I'm planning to add a paragraph on what are meaningful social interactions into the
+          introduction once I can find a definition of it, but I think it would help the introduction in relation to affective states.
+          I added a short paragraph to Research Objectives just to give a bit of background to how to research is positioned. I want to
+          expand on the significance of research part. The literature review, the first part is on computer-mediated communication which
+          was basically last year's literature review, I took sections from there to build upon, and move them around to condense them.
+        </p>
+
+        <p class="appendix-quote-name">Vikas Kailankaje</p>
+        <p class="appendix-quote">
+          Yes that's fine, that's the whole of point of the lit review. I think most students in this class were able
+          to take what they did in BA2 and build on it. Some of them they borrowed a lot more but that's fine.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Ok, then I have this new section on emotions in HCI, so like mainly how are emotions measured and made. Then Affective Computing
+          will be expanded to have some subsections, so Affect as an Informational Model, Sentic Modulation a way of measurement.
+        </p>
+
+        <p class="appendix-quote-name">Vikas Kailankaje</p>
+        <p class="appendix-quote">Hmm like that would the word count exceed, (proceeds to check).</p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          I think I will be around 1800-2000 words for the literature review, based on how it's going so far.
+        </p>
+
+        <p class="appendix-quote-name">Vikas Kailankaje</p>
+        <p class="appendix-quote">It will be 5000-6000 words total so should be ok but your design primer would take some of the word count.
+          Part of the reason we wanted to reduce the word count is because we wanted to shift to design-led research rather students doing
+          a lot of literature reviews but not enough experimentation.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          The the remainder of the literature review would be on Affective Presence. Ok so I'm not too sure on how to phrase this but Affective 
+          Presence is born out of Affective Computing but it's another approach/model. So Affective Computing is affect as an Informational
+          model, so you take the information and assign it to a specific states, so like smile equals happy. Whereas Affective Presence, is
+          based on interaction and like co-interaction of affect, so for example we bump fist then it's like yeah friends happy, more performative.
+          So the main discussion of the dissertation is Affect as Information and Affect as Interaction and to see how they come together in a way,
+          cause I think the goal is to use Affect as Information to recognise, but then through communication it's output as Affect as Interaction
+          to be interpreted. So let's say the machine detects that I'm angry, I slam the table or something, then it'll output something more
+          interpretive, so that the other person can judge based on our co-interpreted meaning and say oh that's anger or something.
+        </p>
+
+        <p class="appendix-quote-name">Vikas Kailankaje</p>
+        <p class="appendix-quote">
+          Hmm ok so it makes sense, oh so actually when you get down to dissertation, you can also include diagrams, what you just described
+          can be in a diagram, even if it's like a flow-chart kind of diagram, a network diagram, they might also be non-hierarchical, so
+          example of a hierarchical chart would be organisation chart, ceo, and etc, but this could be a non-hierarchical chart that just shows
+          how things ping pong across and how this bit if I were you, I have the diagram and as I'm explaining I refer back to the diagram, and
+          have parts where it's just illustration and then numbered. Of course one of the nice things that you've described is that it's not sort
+          of the older information theory where it's coding, decoding, this is a bit more complicated than that, as what sort of adds to that layer
+          is that there some bodily sensations and things like body posture, gesture, pressure. Along the way also try to manage expectations
+          "Affect as Art and Design", even if it's a placeholder try not to be too grand.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Yeah that's just like a point of view of the concept, where you can sort of tweak and adjust the creative output so like is it just
+          a light or something else?
+        </p>
+
+        <p class="appendix-quote-name">Vikas Kailankaje</p>
+        <p class="appendix-quote">
+          Yeah I know, but it's like saying architecture is art and science...by the time you spent 5 years studying you're like uhm i just want to
+          cry its so hard. But let's say if it's to do with co-interpretation or co-construction or however you proceed with it, if that's the focus
+          that's fine. If there are bigger implications to it, you can leave out of the paper, it's something you're interested in and if you approach it
+          like how research approaches it, it could be further things you do, you might want to do a little chap book or something then riso print it as
+          a manifesto or something that'd be cool. So all I'm saying is that you don't have to eat everything at the same table.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Ok so back to methods right, so if it's co-interpretation then I'm self-testing co-interpretation, that doesn't really add up? Cause
+          I can't co-interpreted just by myself.
+        </p>
+
+        <p class="appendix-quote-name">Vikas Kailankaje</p>
+        <p class="appendix-quote">
+        You can get people to join, you need a collaborator, you could use just one person or a different person for each experiment.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Yeah I got the feedback on the methods, and yeah it's a bit muddled but I was stuck trying to fit the word count, but yeah I
+          broke them down into different sections and it should be better now.
+        </p>
+
+        <p class="appendix-quote-name">Vikas Kailankaje</p>
+        <p class="appendix-quote">
+          Mhmm yeah actually this one looks a lot more organised but it's ok, RPO is done you have to go on. And also depends on what you're
+          focusing on, so some students were focused on the tools but some were focusing on the use-cases, where can I find this working, and
+          where can I think about initial testing areas for this application.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">Ok so that's where I'm at now, is it ok for the draft to stop at the Introduction and Methodology, doesn't
+          have to move on to discussion yet.
+        </p>
+
+        <p class="appendix-quote-name">Vikas Kailankaje</p>
+        <p class="appendix-quote">
+          Yeah, but if there are students that have moved on that's a bonus, but to me don't rush, you have a good pace now, so I can see
+          let's say you start writing discussion only in late december, early january that's still ok.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Yeah so I've also changed the method that you said was wrong in the RPO feedback. Cause I remember showing the draft and you didn't say
+          anything about it, then suddenly the feedback then I was like uhhh...
+        </p>
+
+        <p class="appendix-quote-name">Vikas Kailankaje</p>
+        <p class="appendix-quote">
+          Was it something about precedent studies, yeah the reason precedent studies is powerful is because you're studying it at a scale
+          that is comfortable for you and you manage the complexity and you can augment it but you have a point of reference, so even when you
+          discuss it in the discussion section, there'a point of reference and you can explain what you changed, and you can also explain what
+          your focus is. You need to reserve room for that, maybe in the RPO it was a bit more compact but now you can explain in short paragraphs like
+          this is the method, this is the mindset then tools, yeah that makes sense.
+        </p>
+
+        <p class="end-of">// End of Appendix A.</p>
+
+        <p class="appendix-header">// SO1W11.B - Consultation: Graduation Project Game Plan with Andreas Schlegel.</p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          Ok so for five minutes, just tell me what you have been working on, how you want to move on from here and we can also take a look
+          at status of your practical work and the documentation if you have any. So basically tell me what you have and what issues you are facing.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Ok so this is my game plan, ok so I have been figuring out the recognition part of things, so I am using machine learning to work out the
+          recognition of feelings. But I just started on it cause my parts just arrived.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          Ok so yor work is about expressing feelings through interactive interfaces? or how would you call it. How would you frame it, if
+          you had a package with all your work inside what would you call it. How would you label it. Keep it general and not too technical so
+          that people can understand.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          So the input is based on recognition, so expressing feelings through , not interactive interfaces but through a device, a device that
+          helps people express their feelings without explicitly telling them how they feel. So they would run machine learning models that can
+          recognise your feelings that can remotely communicate it with someone else. Ok so the next part is the output, so it's the interpretation
+          so what's different about my work from my case studies is the first part, the recognition, where the rest is mainly focusing on the co-interpretation
+          of feelings, but this device would recognise then it can lead to being interpreted. The output wise, I haven't really thought of how it
+          will look or feel, but I would like to focus on the first part, the recognition cause that's where the struggles are and it also ties in with
+          the dissertation.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          When you say struggles what does that mean? Technical?
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Yes technical, but I'm still trying to figure things out and it's slowly starting to work so there would be progress on that over
+          the next few weeks, for the output there isn't a fixed thing, but I have to do some test and see how people co-interpret feelings.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          Does that mean you don't have an idea yet? Or?
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Well I have a few different ideas so far, I mean colours and light could be one, sound could be one, motion or vibration, need to see
+          how that would work.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          Ok so what I'm suggesting is, in parallel to continuing working on your technical set up, what I would recommend is to focus on what
+          you have developed over the last weeks. So I think there's a lot of work here on this piece of paper, I would recommend to slim it down
+          a bit and at least get one working and when you accomplish that, then you move on to the next one. I don't think it's wise to go and work on
+          three different ideas at once, So my suggestion would be to finish one first, I think the one with the finger the gestures is kind of working,
+          and finish it, finishing here happens on different levels. One is the circuit itself, that it is clean and proper, meaning it doesn't fall
+          apart, for example the breadboard situation you have, a simple way would be to glue down the wires. Why I am worried is that if you put this
+          in a box, and take it out after awhile and the wires came off, it would be complicated to redo it. But I would recommend to finish one circuit
+          on a technical level first. Then make sure that the software works as well, here working doesn't have to be perfect, but it suggests what
+          your idea is about and it proves that it does it at a very simple basic level. So that doesn't mean that the fidelity has to be very high,
+          focus on a low fidelity, if I do this, something happens...etc. Don't see this as an engineering project see it as an interaction design
+          project maybe, and as you look around on the internet you will find a lot of interaction design projects that have a solid documentation.
+          But the documentation is not based on a solid polished product but it's based on an early stage of a prototype or maybe a later stage prototype
+          that does exactly what is seen in the video. Take this as a goal rather than a finished product. Why am I saying this, for you to move on
+          to the next implementation you are basically going back to zero and doing everything over again just in a different direction, instead of gesture
+          you're looking at posture. Have you finished your research and theory, is it in a good complete shape? Would it require a lot more time at this stage?
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Yes, the theory I'm almost done, but the discussion part that requires the testing of the tech.
+        </p>
+        
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          Ok so whatever you're doing here will help you to further develop your dissertation. You're not at the point where you're thinking
+          that you might still change things. So whatever you're doing here feeds into your project. So let's focus on the discussion, the
+          methodology and discussion.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Yes the dissertation and grad project explorations run in tandem and no I won't be changing anything else.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          Yeah ok so for the output I would recommend the same thing, the interpretation, don't aim for a product, just aim for small experiments
+          if you want to work with light then work with light, same for sound and motion. Here again it's not expected at this point there's no expectation
+          in terms of the quality of what sound or colours, the expectation here is proof. Something happens here, something happens there, if this proof
+          is done, move on to the next step. Fine-tune in tandem the input and output, or push the input aside and focus on the output, if you work with
+          colours, how do you want to colours to respond, what are the behaviours that you're looking for, we've briefly mentioned this. If you just have
+          a few pixels available the story becomes very different because you're not able to create something very visually complex, so you have to
+          use light in a way that it speaks to an audience more through it's character and behaviour, and that's already a very big topic on it's own.
+          For sounds, yesterday I saw this project by Pentagram, they're looking at the sounds of electric cars, they have these videos of adaptive
+          electric engine sounds, there are 3 curves, a single sine wave but they accelerate in different curves. (Listen to sounds.) Three simple examples
+          which do you find works.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          I think the second or the third one, the first one starts out too loud.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          Yeah see these are small experiments that maybe you can use as a reference or starting point to do some experiments with sound. With
+          colour you can do the same things as well it's just the intensity of the light and you can get some feedback from your target audience,
+          so maybe that can help prevent you from going too deep. If the focus is too much on the technicality the danger is that you might get lost
+          in the rabbit hole. So just stay on the surface and avoid that altogether. So this is a good example of designing something very quickly
+          and then getting feedback. Then you can fine-tune it again later.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Yeah so this was the plan was to be more simple and less technical in the interpretation part because the recognition part is a bit
+          more technical but I think these are still manageable for now.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          These plans are always great, and I think what is missing is the timeline, but actually it's not too bad.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          I'm hoping to complete all these challenges by end of the year before the start of the next semester.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          One thing not to underestimate, are you considering real time reaction response or delayed time reaction response.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Delayed time reaction response.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          Ok then MQTT should work, so you've got it working so it's fine.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Yeah now it's just linking the MQTT to the rest of the project, cause I just found source codes that I'm digging through now,
+          So i'm still trying to understand them and apply them.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          I do know that these technical development always takes a really long time, and the more new stuff you find the more interesting
+          it gets, so don't get trapped.
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          Yeah so I'm trying to pace this out over this year and completely all the technical stuff before next semester so that I can focus
+          on the story, the narrative, the idea, the conceptual next semester.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          Highly recommend that you really finish this and that you are also satisfied with what you have and don't really push that. So
+          that more time can be spent on the aesthetic, not just the visual but also sound, behaviour, and the packaging. My recommendation is
+          that you finish it by the end of the year, the technical implementation, one of them, for input I guess the gesture, then the output
+          can maybe focus on two, the colour and sound, if you want to work with motion, some actuators, I would put that aside for now cause
+          I think it would be easier to focus on colour and sound first as in my opinion, there is less work that you need to put in compared to
+          something that involves motion cause you would have to build a robotic/kinetic object but colours you can just use an LED strip or
+          speakers for sound. In terms of status do you think you're on track?
+        </p>
+
+        <p class="appendix-quote-name">Matthew Lau</p>
+        <p class="appendix-quote">
+          By my measures and goals yes.
+        </p>
+
+        <p class="appendix-quote-name">Andreas Schlegel</p>
+        <p class="appendix-quote">
+          My recommendation is to focus less on the fidelity, so maybe by week 13, I want to see something work. The input and output work.
+          And I want to see that circuit are in in a cleaned up state, so it could be placed on a small acrylic or in a box or you can use glue
+          or double sided tape or screws, whatever you think is the most convenient for you but also aesthetically the best solution so we
+          don't have to deal with a circuit that's so exposed. 
+        </p>
+
+        <p class="end-of">// End of Appendix B.</p>
+      </div>
+    </div>
+
+  </body>
