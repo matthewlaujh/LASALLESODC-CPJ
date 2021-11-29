@@ -84,7 +84,7 @@ a.nav-link {
     line-height: 2.6rem;
     font-feature-settings: "liga" 1, "kern" 1,;
     font-variation-settings: 'wght' 400;
-    color: #FFA500;
+    color: #f60;
 }
 
 a.nav-link :hover {
@@ -93,7 +93,7 @@ a.nav-link :hover {
     line-height: 2.6rem;
     font-feature-settings: "liga" 1, "kern" 1, "ss01";
     font-variation-settings: 'wght' 700;
-    color: #FFA500;
+    color: #f60;
 }
 
 a.nav-link :visited {
@@ -102,7 +102,7 @@ a.nav-link :visited {
     line-height: 2.6rem;
     font-feature-settings: "liga" 1, "kern" 1, "ss01";
     font-variation-settings: 'wght' 400;
-    color: #FFA500;
+    color: #f60;
 }
 
 .nav-footer {
@@ -117,7 +117,7 @@ p.nav-footer-content {
     line-height: 1.6rem;
     font-feature-settings: "liga" 1, "kern" 1,;
     font-variation-settings: 'wght' 400;
-    color: #FFA500;
+    color: #f60;
     width: 20vw;
 }
 
@@ -153,12 +153,12 @@ p.nav-footer-content {
 
 a.back-to-top-arrow {
     position: fixed;
-    color: #FFA500;
+    color: #f60;
     scroll-behavior: smooth;
     bottom: 2vw;
     right: 2vw;
     font-family: "Fira-Code-Variable";
-    color: #FFA500;
+    color: #f60;
     z-index: 100;
 }
 
@@ -178,7 +178,7 @@ p.end-of {
     font-size: 1.1rem;
     line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
-    color: #FFA500;
+    color: #f60;
     transition: font-variation-settings 0.3s ease;
     animation-name: end-of-animation;
     animation-duration: 3s;
@@ -228,7 +228,7 @@ p.page-header {
     line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
-    color: #FFA500;
+    color: #f60;
     transition: font-variation-settings 0.3s ease;
     animation-name: end-of-animation;
     animation-duration: 3s;
@@ -245,7 +245,7 @@ p.page-subheader {
     line-height: 2.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
-    color: #FFA500;
+    color: #f60;
 }
 
 p.page-content {
@@ -256,7 +256,7 @@ p.page-content {
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
-    color: #FFA500;
+    color: #f60;
     text-indent: 3vw;
 }
 
@@ -267,7 +267,7 @@ p.page-content-dash {
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
-    color: #FFA500;
+    color: #f60;
 }
 
 a.page-content-dash-link {
@@ -277,7 +277,7 @@ a.page-content-dash-link {
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
-    color: #FFA500;
+    color: #f60;
     text-decoration: underline dotted;
 }
 
@@ -288,7 +288,7 @@ a.page-content-dash-link:visited {
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     font-variation-settings: 'wght' 400;
-    color: #FFA500;
+    color: #f60;
 }
 
 p.reflections-content {
@@ -301,7 +301,7 @@ p.reflections-content {
     line-height: 3.5rem;
     font-feature-settings: 'liga' 1, 'kern' 1,;
     text-indent: 3vw;
-    color: #FFA500;
+    color: #f60;
 }
 
 p.dissertation-header {
